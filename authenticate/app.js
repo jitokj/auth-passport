@@ -10,7 +10,7 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/auth');
+mongoose.connect('mongodb://localhost/auth',{useNewUrlParser: true });
 var db = mongoose.connection;
 
 
@@ -22,7 +22,7 @@ var app = express();
 
 //view engine setup
 app.set("views", path.join(__dirname,'views'));
-app.engine('hbs', exphbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname+'/views/layouts/'}));
+app.engine('hbs', exphbs({extname: 'hbs', defaultLayout: 'layout'}));
 app.set("view engine", 'hbs');
 
 //bodyparser middleware
@@ -85,6 +85,6 @@ app.use(expressValidator({
  app.set('port', (process.env.PORT || 3000));
 
  app.listen(app.get('port'),function(){
-  console.log('server started on port ' +app.get('port'));
+  console.log('server started on port ' + app.get('port'));
  });
 
