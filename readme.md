@@ -10,10 +10,10 @@
 
 ### Installation prequisites and steps to start app:
 
-1. Ensure that NodeJS (version 8.15 ideally) is installed in the system. For more information about NodeJS, go to https://nodejs.org. To check if installed, open a terminal window:
+1. Ensure that Node.js is installed in the system. For more information about NodeJS, go to https://nodejs.org. To check if installed, open a terminal window:
 
    ```$ node -v```
-2. If NodeJS is not installed, go to https://nodejs.org and download the compatible version (version 8.15) based on system OS, or in a terminal window:
+2. If Node.js is not installed, go to https://nodejs.org and download the compatible version (version 8.15) based on system OS, or in a terminal window:
 
    ```$ sudo apt-get install -y nodejs```
 3. Install mongodb and mongoose
