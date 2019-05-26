@@ -1,5 +1,5 @@
 <p align="right">
-  <img src="authenticate/public/images/fav.png" width="130" height="40">
+  <img src="authenticate/public/images/fav.png" width="70" height="40">
 </p>
 
 # Auth
