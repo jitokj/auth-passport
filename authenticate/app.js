@@ -10,7 +10,7 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/auth',{useNewUrlParser: true });
+mongoose.connect('mongodb://localhost/auth',{useNewUrlParser: true, useCreateIndex: true });
 var db = mongoose.connection;
 
 
@@ -74,6 +74,7 @@ app.use(expressValidator({
      res.locals.success_msg = req.flash('success_msg');
      res.locals.error_msg = req.flash('error_msg');
      res.locals.error = req.flash('error');
+     res.locals.user = req.user || null
      next();
  });
 

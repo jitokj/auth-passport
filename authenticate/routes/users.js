@@ -95,10 +95,13 @@ router.post('/register',(req,res)=>{
         failureRedirect: '/users/login',failureFlash: true,successFlash: true }),
        (req,res)=>{
          res.redirect('/');
-       }
-
-
-        );     
+       });
+       
+    router.get('/logout',(req,res)=>{
+      req.logout();
+      req.flash('success_msg','successfully logged out');
+      res.redirect('/users/login');
+    })   
     
 
 
